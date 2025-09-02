@@ -1,0 +1,15 @@
+button{
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-weight: bold;
+    margin: 10px;
+    background-color: chartreuse;
+    color: black;
+    border: none;
+    border-radius: 13px;
+}
+button:hover{
+    background-color:seagreen;
+}
