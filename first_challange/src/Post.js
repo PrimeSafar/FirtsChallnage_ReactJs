@@ -1,12 +1,12 @@
 import "./Post.css"
 import Button from "./Button";
-export default function Post(){
+export default function Post({name , content , title}){
 return(
 <div className={"Post-div"}>
-<h2>this is post </h2>
+<h2>{name}</h2>
 <hr></hr>
-<h4>This iS post Details</h4>
-<Button />
+<h4>{content}</h4>
+<Button title={title} />
 </div>
 );
 }

@@ -11,24 +11,22 @@ function App() {
       {/* Post  and Side Container  */}
       <div className={"Container"}>
         {/* Post Container  */}
-      <div className={"post-main"}>
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-      </div>
-      {/*  --Post Container --  */}
+        <div className={"post-main"}>
+         <Post name="safar" content="Hi from safar" title="Click Safar" />
+<Post name="alex" content="Hi from alex" title="Click Alex" />
+<Post name="john" content="Hi from john" title="Click John" />
+<Post name="amigo" content="Hi from amigo" title="Click Amigo" />
+<Post name="vanilla" content="Hi from vanilla" title="Click Vanilla" />
 
-      {/*  Side  Container   */}
-      <div>
-        <Side />
-      </div>
-      {/*  --Side Container --  */}
+         
+        </div>
+        {/*  --Post Container --  */}
+
+        {/*  Side  Container   */}
+        <div>
+          <Side />
+        </div>
+        {/*  --Side Container --  */}
       </div>
       {/* --- Post  and Side Container---  */}
     </div>

@@ -3,9 +3,9 @@ import Button from "./Button";
 export default function Side(){
     return(
         <div className={"side-div"}>
-            <Button />
-            <Button />
-            <Button />
+            <Button title="safar" />
+            <Button title="alex" />
+            <Button title="john" />
         </div>
     );
 }

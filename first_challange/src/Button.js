@@ -1,8 +1,8 @@
 import "./BUTTON.css"
-export default function Button(){
+export default function Button({title="no title"}){
     return(
         <button>
-                Click Me 
+                {title}
             </button>
     );
 }
