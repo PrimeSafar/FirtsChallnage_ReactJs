@@ -3,34 +3,47 @@ import "./App.css";
 import Header from "./Header";
 import Post from "./Post";
 import Side from "./Side";
-
+const showSide = true;
 function App() {
+  const myPostArr = [
+    { id: 1, name: "safar", content: "doing homework", title: "no title" },
+    { id: 2, name: "alex", content: "doing program", title: "no title" },
+    { id: 3, name: "vanilla", content: "doing post", title: "no title" },
+  ];
+  const myPostRender = myPostArr.map((post) => {
+    return (
+      <Post
+        key={post.id}
+        name={post.name}
+        content={post.content}
+        title={post.title}
+      />
+    );
+  });
   return (
     <div className="App">
       <Header />
       {/* Post  and Side Container  */}
+
       <div className={"Container"}>
-        {/* Post Container  */}
-        <div className={"post-main"}>
-         <Post name="safar" content="Hi from safar" title="Click Safar" />
-<Post name="alex" content="Hi from alex" title="Click Alex" />
-<Post name="john" content="Hi from john" title="Click John" />
-<Post name="amigo" content="Hi from amigo" title="Click Amigo" />
-<Post name="vanilla" content="Hi from vanilla" title="Click Vanilla" />
-
-         
-        </div>
-        {/*  --Post Container --  */}
-
-        {/*  Side  Container   */}
+        <div className={"post-main"}>{myPostRender}</div>
         <div>
-          <Side />
+          <AppSide />
         </div>
-        {/*  --Side Container --  */}
       </div>
       {/* --- Post  and Side Container---  */}
     </div>
   );
 }
-
+function AppSide() {
+  if (showSide) {
+    return <Side />;
+  } else {
+    return (
+      <div style={{ fontSize: "2rem", color: "black" }}>
+        Its False Condition{" "}
+      </div>
+    );
+  }
+}
 export default App;
