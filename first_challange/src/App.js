@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Header";
 import Post from "./Post";
 import Side from "./Side";
+import MyButton1 from "./myButton";
 const showSide = true;
 function App() {
   const myPostArr = [
@@ -23,13 +24,16 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <MyButton1 />
       {/* Post  and Side Container  */}
 
       <div className={"Container"}>
         <div className={"post-main"}>{myPostRender}</div>
+       
         <div>
           <AppSide />
         </div>
+        
       </div>
       {/* --- Post  and Side Container---  */}
     </div>
