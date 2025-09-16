@@ -5,7 +5,7 @@ import Post from "./Post";
 import Side from "./Side";
 import MyButton1 from "./myButton";
 import Input from "./Input";
-
+import Form from "./form";
 
 
 const showSide = true;
@@ -27,17 +27,19 @@ function App() {
   });
   return (
     <div className="App">
-      <Header />
-      <MyButton1 />
+      <Form />
+      {/* <Header /> */}
+      {/* <MyButton1 /> */}
      
       {/* Post  and Side Container  */}
 
       <div className={"Container"}>
-        <div className={"post-main"}>{myPostRender}</div>
+        {/* <div className={"post-main"}>{myPostRender}</div> */}
        
         <div>
-          <AppSide />
-           <Input />
+          {/* <AppSide /> */}
+           {/* <Input /> */}
+
         </div>
         
       </div>
