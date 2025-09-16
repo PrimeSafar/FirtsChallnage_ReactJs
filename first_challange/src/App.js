@@ -4,6 +4,10 @@ import Header from "./Header";
 import Post from "./Post";
 import Side from "./Side";
 import MyButton1 from "./myButton";
+import Input from "./Input";
+
+
+
 const showSide = true;
 function App() {
   const myPostArr = [
@@ -25,6 +29,7 @@ function App() {
     <div className="App">
       <Header />
       <MyButton1 />
+     
       {/* Post  and Side Container  */}
 
       <div className={"Container"}>
@@ -32,6 +37,7 @@ function App() {
        
         <div>
           <AppSide />
+           <Input />
         </div>
         
       </div>
