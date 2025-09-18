@@ -1,26 +1,26 @@
 import { useState } from "react";
 export default function Form() {
-  const [nameInput, setNameInput] = useState("");
-  const [emailInput,setEmailInput]= useState("")
+//   const [nameInput, setNameInput] = useState("");
+//   const [emailInput,setEmailInput]= useState("")
+const [formInputs , setFormInputs] =useState({name:"",email:""})
 
   return (
     <form onSubmit={(event)=>{
         event.preventDefault()
-        console.log(emailInput , nameInput)
     }}>
       <label>name:</label>
       <input
-        value={nameInput}
+        value={formInputs.name}
         onChange={(event) => {
-          setNameInput(event.target.value);
+          setFormInputs({name:event.target.value});
         }}
       />
       <hr></hr>
 
       <label>email:</label>
-      <input  value={emailInput}
+      <input  value={formInputs.email}
         onChange={(event) => {
-          setEmailInput(event.target.value);
+          setFormInputs({email:event.target.value});
         }} />
 
       <hr></hr>
