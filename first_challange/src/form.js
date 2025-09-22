@@ -86,7 +86,7 @@ export default function Form() {
         <input
           checked={formInputs.isStudent}
           onChange={(event) => {
-            //isStudent:event.target.value BOOLEAN VALUE
+            //! isStudent:event.target.checked -- this is fix by change value to  BOOLEAN VALUE
             setFormInputs({ ...formInputs, isStudent: event.target.checked });
           }}
           type="checkbox"
