@@ -1,8 +1,12 @@
 import { useState } from "react";
 
 export default function Form() {
-  
-  const [formInputs, setFormInputs] = useState({ name: "", email: "" , GeneralInfo: "" , isStudent: true });
+  const [formInputs, setFormInputs] = useState({
+    name: "",
+    email: "",
+    GeneralInfo: "",
+    isStudent: true,
+  });
 
   const formStyle = {
     maxWidth: "400px",
@@ -72,26 +76,27 @@ export default function Form() {
         />
         <label>General Info</label>
         <textarea
-        value={formInputs.GeneralInfo}
-         onChange={(event)=>{
-          setFormInputs({...formInputs,GeneralInfo:event.target.value})
-        }} />
+          value={formInputs.GeneralInfo}
+          onChange={(event) => {
+            setFormInputs({ ...formInputs, GeneralInfo: event.target.value });
+          }}
+        />
 
         <label>are you student</label>
-        <input checked={formInputs.isStudent} onChange={(event)=>{
-          //isStudent:event.target.value BOOLEAN VALUE 
-          setFormInputs({...formInputs , isStudent:event.target.value})
-        }} type="checkbox"></input>
-          
-       
-
+        <input
+          checked={formInputs.isStudent}
+          onChange={(event) => {
+            //isStudent:event.target.value BOOLEAN VALUE
+            setFormInputs({ ...formInputs, isStudent: event.target.checked });
+          }}
+          type="checkbox"
+        ></input>
 
         <button type="submit" style={buttonStyle}>
           Submit
         </button>
       </form>
-    
-    
+
       <div
         style={{
           maxWidth: "400px",
@@ -136,7 +141,6 @@ export default function Form() {
         >
           Reset
         </button>
-        
       </div>
     </>
   );
