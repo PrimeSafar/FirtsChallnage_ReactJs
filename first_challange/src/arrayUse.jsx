@@ -10,7 +10,7 @@ export default function Arraypush() {
       if (device.id === id) {
         selectIndex = index;
       }
-      index = index + 1;
+      index = index + 2;
     }
     newDevices1.splice(selectIndex, 1);
     setDevices(newDevices1);
