@@ -6,6 +6,7 @@ export default function Form() {
     email: "",
     GeneralInfo: "",
     isStudent: true,
+    selectMenu: "",
   });
 
   const formStyle = {
@@ -86,11 +87,20 @@ export default function Form() {
         <input
           checked={formInputs.isStudent}
           onChange={(event) => {
-            //! isStudent:event.target.checked -- this is fix by change value to  BOOLEAN VALUE
+            //! isStudent:event.target.checked  -- this is fix by change value to  BOOLEAN VALUE
             setFormInputs({ ...formInputs, isStudent: event.target.checked });
           }}
           type="checkbox"
         ></input>
+        <hr></hr>
+        <select value={formInputs.selectMenu} onChange={(event)=>{
+          setFormInputs({...formInputs , selectMenu:event.target.value})
+        }}>
+          <option>milk</option>
+          <option>coffee</option>
+          <option>tea</option>
+          <option>orange juice</option>
+        </select>
 
         <button type="submit" style={buttonStyle}>
           Submit
